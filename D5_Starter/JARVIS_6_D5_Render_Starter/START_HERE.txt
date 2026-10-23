@@ -1,0 +1,38 @@
+JARVIS 6 / D5 RENDER -- START HERE
+================================
+
+WHAT YOU HAVE
+- Three genuine 3D lab/command/avatar scenes, supplied as GLB and OBJ+MTL.
+- The OBJ geometry uses named separate objects and diffuse colour materials.
+- A Blender-only script that can export FBX if D5 rejects GLB/OBJ.
+- Three actual preview PNGs from the model-building stage.
+- First-render camera, lighting, emission and material design notes.
+
+QUICK START (D5 RENDER, WINDOWS)
+1. Install D5 Render from https://www.d5render.com/download
+2. Open D5 Render and create a NEW project.
+3. Choose Import in the top toolbar and browse to 01_IMPORT_INTO_D5.
+4. Start with 01_Futuristic_Hologram_Lab.glb; if your D5 release does
+   not show GLB as supported, try 01_Futuristic_Hologram_Lab.obj.
+   For OBJ keep .mtl alongside it in the SAME FOLDER.
+5. Once it loads, position/confirm the imported scene. Frame it.
+6. Follow 03_GUIDES/FIRST_RENDER_GUIDE.md for materials, lighting, views.
+7. SAVE your D5 project as JARVIS_6_Lab_01 in a local work folder.
+
+KEY CAVEATS
+- These are model assets, NOT a native D5 project file (.drs/.d5a).
+- A D5 project cannot be saved/tested here without the Windows D5 application.
+- Materials, glow, lighting, cameras and render quality require adjustments in D5.
+- These are STATIC environments / avatars. VR motion/voice require a game engine.
+- D5 hardware needs Windows and a raytracing-ready dedicated GPU.
+- Nothing in this pack modifies JARVIS, Blender or your existing files.
+
+MODELS
+  01 Futuristic Hologram Lab   -- start here (includes a humanoid JARVIS)
+  02 Orbital Command Deck      -- sci-fi control room
+  03 JARVIS Avatar Workshop    -- three humanoid prototypes
+
+Official documentation:
+https://docs.d5render.com/getting-started/d5-workflow/model-connection
+https://dev-docs.d5render.com/user-guide/model/import
+https://www.d5render.com/workflow/blender

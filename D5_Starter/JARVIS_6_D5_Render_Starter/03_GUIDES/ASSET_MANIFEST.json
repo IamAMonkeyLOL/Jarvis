@@ -1,0 +1,30 @@
+{
+  "origin": "Previously generated JARVIS 6 lab assets (user project)",
+  "units": "metres",
+  "models": {
+    "01_Futuristic_Hologram_Lab": {
+      "vertices": 1414,
+      "objects": 44,
+      "materials": 9,
+      "faces": 2664
+    },
+    "02_Orbital_Command_Deck": {
+      "vertices": 1244,
+      "objects": 43,
+      "materials": 7,
+      "faces": 2328
+    },
+    "03_JARVIS_Avatar_Workshop": {
+      "vertices": 2114,
+      "objects": 70,
+      "materials": 7,
+      "faces": 3960
+    }
+  },
+  "formats": [
+    "GLB",
+    "OBJ+MTL"
+  ],
+  "native_d5_project_included": false,
+  "tested_in_D5": false
+}
