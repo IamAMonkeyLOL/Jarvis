@@ -10,7 +10,7 @@ The workflow publishes `docs/` plus the scene assets and preview archive. It doe
 
 ## AI chat
 
-The website starts in **Demo mode**. Responses in this mode are predefined guides, not AI-generated replies. No hosted AI backend or provider key is included.
+The website starts in **Demo mode**. Responses in this mode are predefined guides, not AI-generated replies. A ready-to-host OpenAI backend is included in [backend/](backend/README.md); deployment and your own provider key are still required.
 
 To enable live chat, host a server endpoint and enter its HTTPS URL under **Connection & setup**. It must accept `POST` JSON:
 
