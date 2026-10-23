@@ -3,3 +3,10 @@
 !.env.example
 node_modules/
 *.log
+__pycache__/
+*.py[cod]
+analysis-report.json
+*.zip
+build/
+dist/
+Jarvis.spec

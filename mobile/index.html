@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111827">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Jarvis">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jarvis Mobile Analyzer</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">JARVIS MOBILE</p>
+        <h1>Python quick review</h1>
+        <p class="subtitle">Paste Python code for a private, on-device static review.</p>
+      </header>
+
+      <section class="card">
+        <label for="source">Python source</label>
+        <textarea id="source" spellcheck="false" placeholder="Paste Python code here..."></textarea>
+        <div class="actions">
+          <button id="analyze" type="button">Analyze code</button>
+          <button id="clear" class="secondary" type="button">Clear</button>
+          <button id="install" class="secondary" type="button" hidden>Install app</button>
+        </div>
+      </section>
+
+      <section class="card" aria-live="polite">
+        <div class="results-heading">
+          <h2>Findings</h2>
+          <span id="summary">Paste code to begin.</span>
+        </div>
+        <ul id="findings"></ul>
+      </section>
+
+      <section class="card note">
+        <h2>Privacy and VPN</h2>
+        <p>Analysis runs entirely in this browser. No code is uploaded. A web app cannot create or control an iPhone VPN connection; use an installed VPN provider app for that.</p>
+        <p id="install-help">On iPhone Safari, tap Share, then choose <strong>Add to Home Screen</strong> after this app is hosted on HTTPS.</p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

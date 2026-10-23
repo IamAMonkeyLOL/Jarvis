@@ -1,0 +1,42 @@
+:root {
+  color-scheme: dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #111827;
+  color: #f9fafb;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+main { max-width: 720px; margin: 0 auto; padding: 28px 16px 48px; }
+
+.eyebrow { color: #67e8f9; font-size: .75rem; font-weight: 700; letter-spacing: .16em; margin: 0; }
+
+h1 { font-size: 2rem; margin: 8px 0; }
+
+h2 { font-size: 1rem; margin: 0; }
+
+.subtitle, .note p { color: #cbd5e1; line-height: 1.5; }
+
+.card { background: #1f2937; border: 1px solid #374151; border-radius: 14px; margin-top: 18px; padding: 16px; }
+
+label { display: block; font-weight: 600; margin-bottom: 8px; }
+
+textarea { background: #030712; border: 1px solid #4b5563; border-radius: 8px; color: #f9fafb; font-family: ui-monospace, Consolas, monospace; font-size: .88rem; min-height: 280px; padding: 12px; resize: vertical; width: 100%; }
+
+button { background: #06b6d4; border: 0; border-radius: 8px; color: #083344; cursor: pointer; font-weight: 700; margin: 12px 8px 0 0; padding: 10px 14px; }
+
+button.secondary { background: #374151; color: #f9fafb; }
+
+.results-heading { align-items: baseline; display: flex; justify-content: space-between; gap: 12px; }
+
+#summary { color: #94a3b8; font-size: .84rem; }
+
+#findings { list-style: none; margin: 16px 0 0; padding: 0; }
+
+#findings li { border-left: 4px solid #67e8f9; margin-top: 8px; padding: 10px; background: #111827; border-radius: 4px; line-height: 1.4; }
+
+#findings li.high { border-color: #f87171; }
+#findings li.medium { border-color: #fbbf24; }
+#findings li.info { border-color: #67e8f9; }
