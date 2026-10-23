@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101414"><meta name="description" content="Jarvis — a workspace for your next idea. Chat, explore creative scenes, and download the desktop preview.">
+  <title>Jarvis · Your creative workspace</title>
+  <link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="#"><span class="brand-icon">J</span> JARVIS<span class="version">06</span></a>
+  <button id="new-chat" class="new-chat">＋ New conversation <span>↗</span></button>
+  <div class="nav-label">WORKSPACE</div>
+  <nav aria-label="Workspace"><button class="nav active" data-view="chat">◉ <span>Conversation</span></button><button class="nav" data-view="studio">▧ <span>Creative studio</span></button><button class="nav" data-view="setup">⚙ <span>Connection & setup</span></button></nav>
+  <div class="sidebar-note"><span class="tiny-dot"></span> A little space to think bigger.<p>Your conversations stay in this browser. You’re in control.</p></div>
+  <a class="repo" href="https://github.com/IamAMonkeyLOL/Jarvis" target="_blank" rel="noopener">View on GitHub <span>↗</span></a>
+</aside>
+<main>
+  <header><div><span class="header-dot"></span> PERSONAL WORKSPACE <span class="slash">/</span> <span id="view-label">Conversation</span></div><button id="mode-badge" class="badge">Demo mode <span>↗</span></button></header>
+  <section id="chat" class="view">
+    <div id="welcome"><div class="eyebrow">A CLEARER SPACE FOR YOUR IDEAS</div><h1>Big ideas.<br><span>Start here.</span></h1><p class="intro">Meet Jarvis. Your space to explore, plan, and bring<br class="desktop-break"> something new into the world.</p>
+    <div class="suggestions"><button data-prompt="Help me plan a creative project"><span>↗</span><strong>Find a starting point</strong><small>Turn a loose idea into a plan</small></button><button data-prompt="Show me the creative scenes"><span>▧</span><strong>Build another world</strong><small>Explore the Blender & D5 collection</small></button><button data-prompt="How do I connect live AI?"><span>✳</span><strong>Make it your own</strong><small>Connect your hosted AI service</small></button></div></div>
+    <div id="messages" role="log" aria-label="Conversation" aria-live="polite"></div>
+    <div class="composer-wrap"><div id="chat-status" role="status">Demo mode · guided responses, no live AI connected</div><form id="chat-form"><label class="sr-only" for="prompt">Message Jarvis</label><textarea id="prompt" rows="1" maxlength="12000" placeholder="What’s on your mind?" required></textarea><button id="send" type="submit" aria-label="Send message">↑</button></form><div class="composer-footer"><span>JARVIS / CREATIVE INTELLIGENCE</span><button id="export">Export conversation ↓</button></div></div>
+  </section>
+  <section id="studio" class="view" hidden><div class="eyebrow">FROM IDEA TO ENVIRONMENT</div><h1>Your next<br><span>world awaits.</span></h1><p class="intro">Three scene starters. Open formats. A blank canvas for you.</p><div id="scene-grid" class="scene-grid"></div><div class="download-panel"><div><h2>Take Jarvis to your desktop.</h2><p>The Python preview uses a local Ollama model. Blender and D5 launch controls are Windows features.</p></div><a class="primary-link" href="../JARVIS_6_Operation_Evolution_Preview%2520(1).zip" download>Download preview ↗</a></div></section>
+  <section id="setup" class="view" hidden><div class="eyebrow">YOUR WORKSPACE, YOUR CONNECTION</div><h1>Ready when<br><span>you are.</span></h1><p class="intro">This website runs on GitHub Pages. Connect a hosted backend to enable live AI chat.</p><div class="settings-card"><h2>AI connection</h2><p>Use your own HTTPS chat endpoint. Keep provider API keys on your server — never in this page or repository.</p><form id="settings-form"><label for="endpoint">Hosted chat endpoint</label><input id="endpoint" type="url" placeholder="https://your-service.example/chat"><button class="primary-link" type="submit">Save connection ↗</button><button id="demo" type="button" class="secondary">Use demo mode</button></form><p id="settings-status" role="status"></p><details><summary>Backend connection format</summary><p>The endpoint must accept a JSON POST with <code>{"messages":[{"role":"user","content":"Hello"}]}</code> and return <code>{"reply":"Hello!"}</code>. Allow this site’s origin through CORS. Set up access controls, usage limits, and your provider key on the backend before sharing it with users. Conversation text is sent to that service only when you send a message in connected mode.</p></details></div><div class="settings-card"><h2>Local storage</h2><p>Conversation history and the endpoint URL are saved in this browser. Demo messages never leave this page. Export your conversation before clearing it.</p><button id="clear" class="secondary">Clear saved conversation</button></div></section>
+  <footer><span>INDEPENDENT BY DESIGN.</span><span>JARVIS 6.0 <span class="tiny-dot"></span> WEB PREVIEW</span></footer>
+</main>
+</body></html>

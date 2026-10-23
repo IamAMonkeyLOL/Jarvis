@@ -1,0 +1,37 @@
+name: Publish Jarvis website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Prepare website and downloads
+        run: |
+          mkdir -p _site
+          cp -r docs/. _site/
+          cp -r D5_Starter _site/
+          cp 'JARVIS_6_Operation_Evolution_Preview%20(1).zip' _site/
+          # Assets sit beside index.html in the published site.
+          sed -i 's|\.\./D5_Starter/|D5_Starter/|g' _site/app.js
+          sed -i 's|\.\./JARVIS_6_Operation|JARVIS_6_Operation|g' _site/index.html
+          touch _site/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
